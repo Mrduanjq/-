@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<title>test</title>
+	<style>
+		#div{height:200px;width:100%;background-color: #f00;}
+	</style>
+	<script src="js/newswiper.js"></script>
+</head>
+<body>
+	<div id="div">
+		
+	</div>
+	<script>
+		var div = document.getElementById("div");
+		console.info(window.EnabelSwipe)
+		//给这个dom元素，添加滑动的事件
+		EnabelSwipe.EnabelSwipe(
+				div,
+				{
+					left:function(){
+						alert("left"+Date.now());
+					},
+					right:function(){
+						alert("right"+Date.now());
+					},
+					up:function(){
+						alert("up"+Date.now());
+					},
+					down:function(){
+						alert("down"+Date.now());
+					},
+					
+				}
+			);
+	</script>
+</body>
+</html>
